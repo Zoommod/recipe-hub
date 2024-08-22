@@ -227,6 +227,11 @@ h1, h2, h3, h4 {
     font-size: 1.6rem;
 }
 
+.preparation-steps {
+    white-space: pre-line;
+    padding: 1rem;
+}
+
 .recipe-footer a {
     background: var(--color-primary-dark);
     display: block;
