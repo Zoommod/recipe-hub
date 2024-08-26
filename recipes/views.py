@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from utils.recipe.test import make_recipe
 from .models import Recipe, Category
 
@@ -9,6 +9,7 @@ def home (request):
     })
 
 def recipe (request, id):
+    recipe = get_object_or_404(Recipe, id=id)
     return render(request, 'recipes/pages/recipe-view.html', context={
         'recipe': recipe,
         'is_detail_page': True,
